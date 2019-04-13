@@ -23,7 +23,7 @@ router.beforeEach((to, from, next) => {
   } else {
     if (to.name === 'login') {
       console.log('未登录，接着到登录页')
-      next()
+      next('login')
     } else {
       console.log('未登录，跳转到登录页')
       next('login')
